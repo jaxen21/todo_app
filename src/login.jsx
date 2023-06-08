@@ -19,39 +19,48 @@ const Login = () => {
     };
 
     return (
-        <Center mt={'10%'}>
-            <Card
-                shadow="md" radius="md" h={'100%'} w={'20%'}
+        <Center mt={'10%'} w={'100%'}
+        >
+            <Flex w={'100%'} gap="md"
+                justify="center"
+                align="center"
+                direction="column"
             >
-                <Flex
-                    gap="xl"
-                    justify="center"
-                    align="center"
-                    direction="column"
+                <Title>Welcome!</Title>
+                <Card
+                    shadow="md" radius="md"
+                    w={{ xs: '90%', sm: '80%', md: '70%', lg: '60%', xl: '50%' }}
                 >
-                    <Title order={1}>LOGIN</Title>
-                    <TextInput
-                        placeholder="Username"
-                        label="Username" radius="md"
-                        size="md" withAsterisk
-                        value={username} w={'100%'}
-                        onChange={(e) => setUsername(e.target.value)}
-                    />
-                    <PasswordInput
-                        placeholder="Password"
-                        label="Password" radius="md"
-                        size="md" withAsterisk
-                        value={password} w={'100%'}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                    <Button
-                        variant="light" radius="md" size="md"
-                        onClick={handleLogin} w={'100%'}
+                    <Flex
+                        gap="xl"
+                        justify="center"
+                        align="center"
+                        direction="column"
                     >
-                        Login
-                    </Button>
-                </Flex>
-            </Card>
+                        <Title order={2}>LOGIN to continue..</Title>
+                        <TextInput
+                            placeholder="Username"
+                            label="Username" radius="md"
+                            size="md" withAsterisk
+                            value={username} w={'100%'}
+                            onChange={(e) => setUsername(e.target.value)}
+                        />
+                        <PasswordInput
+                            placeholder="Password"
+                            label="Password" radius="md"
+                            size="md" withAsterisk
+                            value={password} w={'100%'}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                        <Button
+                            variant="light" radius="md" size="md"
+                            onClick={handleLogin} w={'100%'}
+                        >
+                            Login
+                        </Button>
+                    </Flex>
+                </Card>
+            </Flex>
         </Center>
     );
 };
